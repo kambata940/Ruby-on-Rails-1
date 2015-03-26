@@ -4,6 +4,7 @@ require_relative 'solution'
 
 class SolutionTest < Minitest::Test
   def test_the_truth
-    assert true
+  	Enums.map(:direction, to: [:east, :west, :north, :south])
+    assert_equal 4, Traveling.new.move_towards(:west)
   end
 end

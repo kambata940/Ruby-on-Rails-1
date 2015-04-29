@@ -1,0 +1,10 @@
+<h1><%= @lecture.name %></h1><br><br>
+
+<label><%= @lecture.body %> </label>
+<br>
+<%= link_to 'tasks', lecture_tasks_path(@lecture) %>
+<br>
+<%= link_to 'edit', edit_lecture_path %> |
+<%= link_to('destroy', @lecture, method: :delete, data: {confirm: 'Are you sureeeee???'}) %>
+<br>
+<%= link_to 'back', lectures_path %>

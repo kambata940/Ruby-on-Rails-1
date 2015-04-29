@@ -1,0 +1,16 @@
+<%= form_for @task, url: lecture_tasks_path(@lecture, @task) do |f| %>
+  <% if @task.errors.any? %>
+    <h2>You have some error to fix!</h2>
+    <% @task.errors.full_messages.each do |error| %>
+      <label> <%= error %> </label>
+    <% end %>
+  <% end %>
+
+  <%= f.label :name %> <br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :description %><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.submit %>
+<% end %>

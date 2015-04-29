@@ -1,0 +1,9 @@
+<h1> All tasks for <%= @lecture.name %></h1>
+ <table>
+  <%  @tasks.each_with_index do |task, index| %>
+    <tr>
+      <th><%= "#{index + 1}." %> </th>
+      <th><%= link_to task.name, lecture_task_path(@lecture, task) %></th>
+    </tr>
+  <% end %>
+ </table>

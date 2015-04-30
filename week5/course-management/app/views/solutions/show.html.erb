@@ -1,0 +1,7 @@
+<h1>Solution for <%= "#{@task.name} in lecture #{@lecture.name}" %> </h1>
+<label> <%= @solution.body %></label>
+<br>
+<%= link_to 'edit', edit_solution_path %> |
+<%= link_to('destroy', solution_path(@lecture, @task, @solution), method: :delete, data: {confirm: 'Are you sureeeee???'}) %>
+<br>
+<%= link_to 'back', solutions_path %>

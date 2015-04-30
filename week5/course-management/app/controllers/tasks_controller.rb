@@ -15,11 +15,10 @@ class TasksController < ApplicationController
   end
 
   def create
-    task_params = params[:task]
     @lecture = Lecture.find(params[:lecture_id])
-    @task = Task.new(name: task_params[:name],
+    @task = Task.new(name: params[:task][:name],
                      lecture_id: params[:lecture_id],
-                     description: task_params[:description]
+                     description: params[:task][:description]
                      )
     if @task.save
       redirect_to lecture_task_path(@lecture, @task),
@@ -36,10 +35,11 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Lecture.find(params[:lecture_id]).tasks.find(params[:id])
-    is_successfull = @task.update(name: task_params[:task][:name],
+    @lecture = Lecture.find(params[:lecture_id])
+    @task = @lecture.tasks.find(params[:id])
+    is_successfull = @task.update(name: params[:task][:name],
                                   lecture_id: params[:lecture_id],
-                                  description: task_params[:task][:description]
+                                  description: params[:task][:description]
                                   )
     if is_successfull
       redirect_to lecture_task_path(@lecture, @task), notice: "Updated!"

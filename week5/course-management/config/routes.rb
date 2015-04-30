@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
-  resources :solutions, path: 'lectures/:lecture_id/tasks/:tasks_id/solutions'
+  resources :solutions, path: 'lectures/:lecture_id/tasks/:task_id/solutions'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

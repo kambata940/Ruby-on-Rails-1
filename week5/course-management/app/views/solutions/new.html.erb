@@ -1,6 +1,6 @@
 <h1>Add solution for task </h1>
 
-<%= form_for @solution, path: solutions_path(@lecture, @task) do |f| %>
+<%= form_for @solution, path: solutions_path(@solution.lecture, @solution.task) do |f| %>
   <% if @solution.errors.any? %>
     <h2>You have some error to fix!</h2>
     <% @solution.errors.full_messages.each do |error| %>

@@ -1,10 +1,10 @@
 <h1>All solutions for task <%= @task.name%> </h1>
 
 <table>
-  <% @solutions.each_with_index do |solution, index| %>
+  <% @task.solutions.each_with_index do |solution, index| %>
   <tr>
     <th> <%= index + 1 %> </th>
-    <th> <%= link_to solution.body , solution_path(@lecture, @task, solution) %> </th>
+    <th> <%= link_to solution.body , solution_path(@task.lecture, @task, solution) %> </th>
   </tr>
   <% end %>
 </table>

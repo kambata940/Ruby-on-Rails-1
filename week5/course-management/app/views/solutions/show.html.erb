@@ -1,7 +1,7 @@
-<h1>Solution for <%= "#{@task.name} in lecture #{@lecture.name}" %> </h1>
+<h1>Solution for <%= "#{@solution.task.name} in lecture #{@solution.lecture.name}" %> </h1>
 <label> <%= @solution.body %></label>
 <br>
 <%= link_to 'edit', edit_solution_path %> |
-<%= link_to('destroy', solution_path(@lecture, @task, @solution), method: :delete, data: {confirm: 'Are you sureeeee???'}) %>
+<%= link_to('destroy', solution_path(@solution.lecture, @solution.task, @solution), method: :delete, data: {confirm: 'Are you sureeeee???'}) %>
 <br>
 <%= link_to 'back', solutions_path %>

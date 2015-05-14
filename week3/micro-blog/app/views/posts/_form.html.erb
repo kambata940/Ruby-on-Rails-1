@@ -1,0 +1,16 @@
+<%= form_for(@post, url: '/new') do |f| %>
+  <% if @post.errors.any? %>
+    <h2>You have same errors</h2>
+    <%= @post.errors.with_full_messages.each do |message| %>
+      <label> <%= message %> </label>
+    <% end %>
+  <% end %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit %>
+<% end %>
+  

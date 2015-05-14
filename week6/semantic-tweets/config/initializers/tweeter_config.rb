@@ -1,0 +1,4 @@
+TwitterConnection.api_key = "IlMQjLkxdEJdfCSKXTYZxxLGA"
+TwitterConnection.api_secret = "6F5N7TYScVrLOprHMaBm7dRSyTYW3GuDI4r021fCe9smurtdgN"
+TwitterConnection.oauth_token = "3233708379-rwLC41307Lw6eiLyzduLpSONbtnOn01ejqlTtVu"
+TwitterConnection.oauth_token_secret = "4HlNXHXcuxKA03FGEy0uWbRr2EQH38rAcTllwzRLAL1KT"

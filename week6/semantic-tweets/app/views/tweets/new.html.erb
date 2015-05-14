@@ -1,0 +1,5 @@
+<%= form_tag('/', method: 'post') do %>
+  <%= label_tag(:text, 'New post:') %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag('Tweet') %>
+<% end %>

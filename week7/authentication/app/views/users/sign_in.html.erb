@@ -4,5 +4,9 @@
   <br>
   <%= f.label :password %>
   <%= f.text_field :password %>
+    <br>
+  <%= f.label 'remember_me' %>
+  <%= check_box_tag 'remember_me' %>
+  <%= f.submit %>
   <%= f.submit %>
 <% end %>

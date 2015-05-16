@@ -31,6 +31,9 @@ class UsersController < ApplicationController
   def checkout
     @user = User.find_by(email: params[:user][:email])
     if @user.authenticate(params[:user][:password])
+      if params[:remember_me]
+        cookies.permanent[:user_id] = @user.id
+      end
       session[:user_id] = @user.id
       render :show
     else
@@ -40,6 +43,7 @@ class UsersController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    cookies.delete :user_id
     redirect_to user_path
   end
 

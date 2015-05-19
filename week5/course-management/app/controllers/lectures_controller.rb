@@ -1,4 +1,4 @@
-class LecturesController < ApplicationController
+  class LecturesController < ApplicationController
   
   def index
     @lectures = Lecture.all
